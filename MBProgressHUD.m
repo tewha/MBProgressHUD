@@ -124,9 +124,9 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	MBProgressHUD *hud = nil;
 	NSArray *subviews = view.subviews;
 	Class hudClass = [MBProgressHUD class];
-	for (UIView *view in subviews) {
-		if ([view isKindOfClass:hudClass]) {
-			hud = (MBProgressHUD *)view;
+	for (UIView *subview in subviews) {
+		if ([subview isKindOfClass:hudClass]) {
+			hud = (MBProgressHUD *)subview;
 		}
 	}
 	return hud;
@@ -136,9 +136,9 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	NSMutableArray *huds = [NSMutableArray array];
 	NSArray *subviews = view.subviews;
 	Class hudClass = [MBProgressHUD class];
-	for (UIView *view in subviews) {
-		if ([view isKindOfClass:hudClass]) {
-			[huds addObject:view];
+	for (UIView *subview in subviews) {
+		if ([subview isKindOfClass:hudClass]) {
+			[huds addObject:subview];
 		}
 	}
 	return [NSArray arrayWithArray:huds];
