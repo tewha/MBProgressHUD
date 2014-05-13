@@ -344,6 +344,12 @@ typedef void (^MBProgressHUDCompletionBlock)();
  */
 @property (assign) float margin;
 
+/**
+ * The corner radius for th HUD
+ * Defaults to 10.0
+ */
+@property (assign) float cornerRadius;
+
 /** 
  * Cover the HUD background view with a radial gradient. 
  * Enabled by default on iOS 7+, disabled by default on previous versions. 
